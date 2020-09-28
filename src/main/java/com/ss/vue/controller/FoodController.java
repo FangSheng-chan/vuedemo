@@ -21,8 +21,15 @@ public class FoodController {
 
     @GetMapping("/list")
     @ResponseBody
-    public List<Food> getList(){
+    public List<Food> getList() {
         return foodService.getList();
     }
+
+    @GetMapping("getProductById")
+    @ResponseBody
+    public Food getFoodById(Long fid) {
+        return foodService.getFoodById(fid);
+    }
+
 
 }

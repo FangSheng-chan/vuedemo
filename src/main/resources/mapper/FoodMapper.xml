@@ -5,7 +5,7 @@
     <resultMap id="BaseResultMap" type="com.ss.vue.entity.Food">
         <id column="id" jdbcType="BIGINT" property="id"></id>
         <result column="name" jdbcType="VARCHAR" property="name"></result>
-        <result column="images" jdbcType="VARCHAR" property="images"></result>
+        <result column="pimg" jdbcType="VARCHAR" property="pimg"></result>
         <result column="price" jdbcType="BIGINT" property="price"></result>
         <result column="sale_price" jdbcType="BIGINT" property="salePrice"></result>
         <result column="type_id" jdbcType="BIGINT" property="typeId"></result>
@@ -16,7 +16,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,name,images,price,sale_price,type_id,type_name,flag,create_time,update_time
+        id,name,pimg,price,sale_price,type_id,type_name,flag,create_time,update_time
     </sql>
 
     <insert id="insert">
@@ -33,4 +33,8 @@
         from
         t_foods
     </select>
+
+    <select id="getFoodById" resultType="com.ss.vue.entity.Food">
+        SELECT * FROM t_foods WHERE f_id = #{fid}
+     </select>
 </mapper>

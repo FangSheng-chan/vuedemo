@@ -19,4 +19,9 @@ public class FoodServiceImpl implements FoodService {
     public List<Food> getList() {
         return foodMapper.selectFoods();
     }
+
+    @Override
+    public Food getFoodById(Long fid) {
+        return foodMapper.getFoodById(fid);
+    }
 }

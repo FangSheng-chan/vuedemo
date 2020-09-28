@@ -17,4 +17,6 @@ public interface FoodMapper {
     int updateById(Long id);
 
     List<Food> selectFoods();
+
+    Food getFoodById(Long fid);
 }

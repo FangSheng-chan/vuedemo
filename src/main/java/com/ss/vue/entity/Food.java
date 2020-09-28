@@ -5,7 +5,7 @@ import java.util.Date;
 public class Food {
     private Long id;
     private String name;
-    private String images;
+    private String pimg;
     private Long price;
     private Long salePrice;
     private Long typeId;
@@ -33,12 +33,12 @@ public class Food {
         this.name = name;
     }
 
-    public String getImages() {
-        return images;
+    public String getPimg() {
+        return pimg;
     }
 
-    public void setImages(String images) {
-        this.images = images;
+    public void setPimg(String pimg) {
+        this.pimg = pimg;
     }
 
     public Long getPrice() {
@@ -97,16 +97,4 @@ public class Food {
         this.updateTime = updateTime;
     }
 
-    public Food(Long id, String name, String images, Long price, Long salePrice, Long typeId, String typeName, Boolean flag, Date createTime, Date updateTime) {
-        this.id = id;
-        this.name = name;
-        this.images = images;
-        this.price = price;
-        this.salePrice = salePrice;
-        this.typeId = typeId;
-        this.typeName = typeName;
-        this.flag = flag;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
-    }
 }
